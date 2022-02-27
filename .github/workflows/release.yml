@@ -20,7 +20,7 @@ jobs:
           args: --release --target x86_64-unknown-linux-musl
       - uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: target/x86_64-unknown-linux-musl/release/proxycat
@@ -42,7 +42,7 @@ jobs:
           args: --release --target arm-unknown-linux-musleabi
       - uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: target/arm-unknown-linux-musleabi/release/proxycat
